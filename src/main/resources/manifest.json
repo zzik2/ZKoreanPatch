@@ -1,0 +1,19 @@
+{
+  "Group": "${group}",
+  "Name": "${name}",
+  "Version": "${version}",
+  "Website": "${website}",
+  "Main": "zzik2.hytale.zkoreanpatch.ZKoreanPatch",
+  "Description": "${description}",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false,
+  "Authors": [
+    {
+      "Name": "${author_name}",
+      "Email": "${author_email}",
+      "Url": "${author_url}"
+    }
+  ]
+}
