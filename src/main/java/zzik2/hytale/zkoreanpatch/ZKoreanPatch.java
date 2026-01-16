@@ -19,7 +19,8 @@ import java.util.jar.JarFile;
 public class ZKoreanPatch extends JavaPlugin {
 
     public static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
-    public static String VERSION = "0.0.3";
+    public static String VERSION = "0.0.4";
+    public static final String FONT_NAME = "Mulmaru";
 
     public ZKoreanPatch(@NonNullDecl JavaPluginInit init) {
         super(init);
@@ -119,11 +120,11 @@ public class ZKoreanPatch extends JavaPlugin {
                     "NunitoSans-Medium"
             };
 
-            Path sourceJson = fontsPath.resolve("Neodgm.json");
-            Path sourcePng = fontsPath.resolve("Neodgm.png");
+            Path sourceJson = fontsPath.resolve(FONT_NAME + ".json");
+            Path sourcePng = fontsPath.resolve(FONT_NAME + ".png");
 
             if (!Files.exists(sourceJson) || !Files.exists(sourcePng)) {
-                LOGGER.atWarning().log("Neodgm font files not found, skipping font replacement.");
+                LOGGER.atWarning().log(FONT_NAME + " font files not found, skipping font replacement.");
                 return;
             }
 
