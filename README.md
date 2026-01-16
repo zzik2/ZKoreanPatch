@@ -3,6 +3,8 @@
 # 미리보기
 <img width="1918" height="1006" alt="im14123124123age" src="https://github.com/user-attachments/assets/0ecc5b95-ba3d-496f-aeec-f5c37a13893d" />
 
+## 다운로드
+[최신 릴리즈](https://github.com/zzik2/ZKoreanPatch/releases/latest)
 
 ## 사용 방법:
 1. ``%appdata%/Hytale/UserData/Mods`` 폴더에 플러그인 파일을 넣기
