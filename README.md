@@ -1,7 +1,7 @@
 하이테일 한국어 패치 플러그인입니다! 🧀
 
 # 미리보기
-<img width="1918" height="1006" alt="im14123124123age" src="https://github.com/user-attachments/assets/0ecc5b95-ba3d-496f-aeec-f5c37a13893d" />
+<img width="1919" height="1079" alt="ima1241241241231ge - 복사본" src="https://github.com/user-attachments/assets/74d3eeb0-d6f5-49d7-8cd0-ca09846ef054" />
 
 ## 다운로드
 [최신 릴리즈](https://github.com/zzik2/ZKoreanPatch/releases/latest)
