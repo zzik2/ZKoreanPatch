@@ -13,3 +13,4 @@
 
 ## 크레딧
 https://github.com/mushsooni/mulmaru - 폰트
+https://github.com/Krash220/Hytale-Font-Fix - 폰트 제한 우회

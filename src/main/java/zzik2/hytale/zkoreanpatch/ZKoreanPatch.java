@@ -19,8 +19,8 @@ import java.util.jar.JarFile;
 public class ZKoreanPatch extends JavaPlugin {
 
     public static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
-    public static String VERSION = "0.0.4";
-    public static final String FONT_NAME = "Mulmaru";
+    public static String VERSION = "0.0.5";
+    public static final String FONT_NAME = "Neodgm";
 
     public ZKoreanPatch(@NonNullDecl JavaPluginInit init) {
         super(init);
@@ -108,6 +108,7 @@ public class ZKoreanPatch extends JavaPlugin {
         }
 
         replaceFonts(gamePath);
+        copyHytaleFontFix(gamePath, modFile);
     }
 
     private void replaceFonts(Path gamePath) {
@@ -138,6 +139,27 @@ public class ZKoreanPatch extends JavaPlugin {
 
         } catch (Exception e) {
             LOGGER.atWarning().log("Failed to replace fonts");
+            e.printStackTrace();
+        }
+    }
+
+    private void copyHytaleFontFix(Path gamePath, File modFile) {
+        try (JarFile jar = new JarFile(modFile)) {
+            Path clientPath = gamePath.resolve("Client");
+            Enumeration<JarEntry> entries = jar.entries();
+
+            while (entries.hasMoreElements()) {
+                JarEntry entry = entries.nextElement();
+                String name = entry.getName();
+
+                if (name.startsWith("assets/hytale/hytale-font-fix/") && !entry.isDirectory()) {
+                    String subPath = name.substring("assets/hytale/hytale-font-fix/".length());
+                    Path dest = clientPath.resolve(subPath);
+                    copyEntry(jar, entry, dest);
+                }
+            }
+        } catch (Exception e) {
+            LOGGER.atWarning().log("Failed to copy hytale-font-fix files");
             e.printStackTrace();
         }
     }
