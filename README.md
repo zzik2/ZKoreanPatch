@@ -12,6 +12,6 @@
 3. 플러그인이 활성화된 월드에 접속 후 게임 재시작(1회성) 🚀
 
 ## 크레딧
-https://github.com/mushsooni/mulmaru - 폰트
+https://github.com/neodgm/neodgm - 폰트
 
 https://github.com/Krash220/Hytale-Font-Fix - 폰트 제한 우회
